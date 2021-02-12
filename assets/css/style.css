@@ -1,0 +1,35 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+  background-color: #e0fcff;
+}
+#navbar {
+  background-color: #90f2ff;
+}
+@media only screen and (max-width: 480px) {
+  .brand-logo {
+    width: 100%;
+    margin-left: 2em;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .brand-logo {
+    width: 100%;
+    margin-left: 2em;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .brand-logo {
+    width: 60%;
+    margin-top: -2em;
+    margin-left: 2em;
+  }
+}
+#nav-mobile {
+  margin-right: 8em;
+}
+#nav-mobile > li > a {
+  color: black;
+  font-size: large;
+  margin-top: 2em;
+}
