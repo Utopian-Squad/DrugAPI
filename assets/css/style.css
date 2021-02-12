@@ -33,3 +33,7 @@ body {
   font-size: large;
   margin-top: 2em;
 }
+.page-footer {
+  margin-top: 10%;
+  background-color: #90f2ff;
+}
