@@ -1,6 +1,7 @@
 drug = document.getElementById("drug").value;
 symptom = document.getElementById("symptom").value;
-
+drug1 = document.getElementById("drug1").value;
+drug2 = document.getElementById("drug2").value;
 const postDiv3 = document.getElementById("thePosts");
 const postDiv4 = document.getElementById("thePosts2");
 
@@ -40,16 +41,16 @@ function load_response_data() {
               output += `
               <div class="row" style="margin-left:10%;">
              
-    <div class="col s12 m10">
-      <div class="card" style="border-radius:3em; background-color: #7098da;">
-        <div class="card-content white-text">
-        <div class="icon"></div>
-          <p style="padding-left:4em;font-size:16px;">&emsp; ${i} : <i style="color:#90f2ff">${res}</i></p>
-        </div>
-       
-      </div>
-    </div>
-  </div>
+                    <div class="col s12 m10">
+                    <div class="card" style="border-radius:3em; background-color: #7098da;">
+                        <div class="card-content white-text">
+                        <div class="icon"></div>
+                        <p style="padding-left:4em;font-size:16px;">&emsp; ${i} : <i style="color:#90f2ff">${res}</i></p>
+                        </div>
+                    
+                    </div>
+                    </div>
+                </div>
               `;
             }
           }
