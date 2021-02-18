@@ -83,3 +83,59 @@ async function load_drug_response() {
     }
 }
 
+function load_drug_data() {
+    load_drug_response()
+        .then(function (logs) {
+            //iterate over each post [30 posts]
+
+            let output2 = "";
+            for (const v in logs) {
+                output2 += `<img src="../assets/images/links.png" alt="" width="53%" style="margin-left:13%;"/>`;
+
+                if (Object.hasOwnProperty.call(logs, v)) {
+                    const element = logs[v];
+                    console.log(element);
+                    output2 += `
+          <div>
+          <h4 style="margin-left:30%;color:#7098da;padding:4%;">${v}</h4>
+          </div>`;
+                    for (const i in element) {
+                        if (Object.hasOwnProperty.call(element, i)) {
+                            const res = element[i];
+                            // console.log(i);
+
+                            output2 += `
+  <div class="row" style="margin-left:10%;">
+             
+  <div class="col s12 m10">
+    <div class="card" style="border-radius:3em; background-color: #7098da;">
+      <div class="card-content white-text">
+      <div class="icon"></div>
+        <p style="padding-left:4em;font-size:16px;">&emsp; ${i} : <i style="color:#90f2ff">${res}</i></p>
+      </div>
+     
+    </div>
+  </div>
+</div>
+              `;
+                        }
+                    }
+                    //console.log(element);
+                }
+            }
+
+            //postDiv4.innerHTML = output2;
+            postDiv4.innerHTML = output2;
+        })
+        .catch(function (err) {
+            console.log(err);
+            //redirect1();
+            // output2 = "CANNOT FIND YOUR REQUEST";
+        });
+}
+
+function redirect1() {
+    setTimeout(function () {
+        window.location = "../error.html";
+    }, 100);
+}
