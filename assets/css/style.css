@@ -33,7 +33,36 @@ body {
   font-size: large;
   margin-top: 2em;
 }
+
+.icon {
+  position: absolute;
+  top: -19px;
+  left: -55px;
+  width: 105px;
+  height: 105px;
+  background: #7098da;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.icon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../images/pill.png") no-repeat;
+}
+
 .page-footer {
   margin-top: 10%;
   background-color: #90f2ff;
+}
+#moto {
+  color: #7098da;
+  text-align: center;
+  padding-bottom: 5%;
+}
+#midd {
+  margin-top: 9%;
 }
