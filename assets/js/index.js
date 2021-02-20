@@ -67,21 +67,21 @@ function load_response_data() {
         });
 }
 
-async function load_drug_response() {
-    //open the request
-    let response = await fetch(
-        `https://www.ehealthme.com/api/v1/drug-interaction/${drug1}/${drug2}`
-    );
-    if (response.ok) {
-        let data = await response.json();
+// async function load_drug_response() {
+//     //open the request
+//     let response = await fetch(
+//         `https://www.ehealthme.com/api/v1/drug-interaction/${drug1}/${drug2}`
+//     );
+//     if (response.ok) {
+//         let data = await response.json();
 
-        return data;
-    } else if (response.status === 404) {
-        setTimeout(function () {
-            window.location = "../error.html";
-        }, 100);
-    }
-}
+//         return data;
+//     } else if (response.status === 404) {
+//         setTimeout(function () {
+//             window.location = "../error.html";
+//         }, 100);
+//     }
+// }
 
 function load_drug_data() {
     load_drug_response()
